@@ -39,6 +39,8 @@ export class Provider extends Component {
  }
 
  handleAddPlayer = (name) => {
+	 		console.log(`handleAddPlayer is running successfully!`);
+
    this.setState( prevState => {
      return {
        players: [
@@ -71,6 +73,7 @@ export class Provider extends Component {
           addPlayer: this.handleAddPlayer
         }
       }}>
+				{/* 'children' in React - A special React prop that lets you pass components as data to other components */}
         { this.props.children }
       </ScoreboardContext.Provider>
     );
